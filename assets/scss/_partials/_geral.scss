@@ -1,0 +1,29 @@
+section.header {
+    height: 650px;
+    & header {
+        @include type-1(15);
+        height: 100%;
+        max-height: 100%;
+        background: {
+            image: url("/assets/img/desktop/image-hero.jpg");
+            position: center;
+            repeat: no-repeat;
+        }
+    }
+    & a {
+        color: $primary-color;
+    }
+}
+
+.navbar-brand {
+    @include type-1(30);
+    letter-spacing: -1px;
+}
+
+.nav-link:hover {
+    color: $primary-color;
+    text-decoration: underline $primary-color solid 2px;
+    text-underline-position: under;
+    transform: translateX(-3);
+    transition: 0.9s
+}

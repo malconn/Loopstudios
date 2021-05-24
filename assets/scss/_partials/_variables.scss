@@ -1,0 +1,37 @@
+//color
+$primary-color:hsl(0, 0%, 100%);
+$second-color:hsl(0, 0%, 0%);
+$third-color:hsl(0, 0%, 55%);
+$for-color:hsl(0, 0%, 41%);
+//tipography
+@mixin type-1($size) {
+    font: {
+        family: 'Alata', sans-serif;
+        weight: 400;
+    }
+    @if $size==15 {
+        font-size: 15px;
+    }
+    @else if $size==30 {
+        font-size: 30px;
+    }
+    @else if $size==45 {
+        font-size: 45px;
+    }
+}
+
+@mixin type-2($size) {
+    font: {
+        family: 'Josefin Sans', sans-serif;
+        weight: 400;
+    }
+    @if $size==15 {
+        font-size: 15px;
+    }
+    @else if $size==30 {
+        font-size: 30px;
+    }
+    @else if $size==45 {
+        font-size: 45px;
+    }
+}
