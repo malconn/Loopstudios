@@ -9,6 +9,7 @@ $for-color:hsl(0, 0%, 41%);
         family: 'Alata', sans-serif;
         weight: 400;
     }
+    color:$primary-color;
     @if $size==15 {
         font-size: 15px;
     }
@@ -25,6 +26,7 @@ $for-color:hsl(0, 0%, 41%);
         family: 'Josefin Sans', sans-serif;
         weight: 400;
     }
+    color:$primary-color;
     @if $size==15 {
         font-size: 15px;
     }
@@ -33,5 +35,8 @@ $for-color:hsl(0, 0%, 41%);
     }
     @else if $size==45 {
         font-size: 45px;
+    }
+    @else if $size==60 {
+        font-size: 60px;
     }
 }

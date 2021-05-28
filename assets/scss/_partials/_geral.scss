@@ -8,6 +8,7 @@ section.header {
             image: url("/assets/img/desktop/image-hero.jpg");
             position: center;
             repeat: no-repeat;
+            size: cover;
         }
     }
     & a {
@@ -20,10 +21,31 @@ section.header {
     letter-spacing: -1px;
 }
 
-.nav-link:hover {
-    color: $primary-color;
-    text-decoration: underline $primary-color solid 2px;
-    text-underline-position: under;
-    transform: translateX(-3);
-    transition: 0.9s
+.nav-link {
+    transition: 1s;
+    &:hover {
+        color: $primary-color;
+        text-decoration: underline $primary-color solid 2px;
+        text-underline-position: under;
+        transform: translateX(-2px);
+        transition: 0.3s;
+    }
+    &:active {
+        color: $primary-color;
+    }
+}
+
+.box-title {
+    height: 100%;
+    max-height: 300px;
+    align-items: center;
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    border: 1px solid $primary-color;
+    padding: 3em;
+}
+
+.title-big {
+    @include type-2(60);
 }

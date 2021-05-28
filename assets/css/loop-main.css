@@ -10737,12 +10737,14 @@ section.header {
 section.header header {
   font-family: 'Alata', sans-serif;
   font-weight: 400;
+  color: white;
   font-size: 15px;
   height: 100%;
   max-height: 100%;
   background-image: url("/assets/img/desktop/image-hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 section.header a {
   color: white;
@@ -10751,16 +10753,41 @@ section.header a {
 .navbar-brand {
   font-family: 'Alata', sans-serif;
   font-weight: 400;
+  color: white;
   font-size: 30px;
   letter-spacing: -1px;
 }
 
+.nav-link {
+  transition: 1s;
+}
 .nav-link:hover {
   color: white;
   text-decoration: underline white solid 2px;
   text-underline-position: under;
-  transform: translateX(-3);
-  transition: 0.9s;
+  transform: translateX(-2px);
+  transition: 0.3s;
+}
+.nav-link:active {
+  color: white;
+}
+
+.box-title {
+  height: 100%;
+  max-height: 300px;
+  align-items: center;
+  display: flex;
+  max-width: 700px;
+  width: 100%;
+  border: 1px solid white;
+  padding: 3em;
+}
+
+.title-big {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 60px;
 }
 
 /*# sourceMappingURL=loop-main.css.map */
