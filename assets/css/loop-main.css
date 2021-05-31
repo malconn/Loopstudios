@@ -10790,4 +10790,35 @@ section.header a {
   font-size: 60px;
 }
 
+section.leader {
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 15px;
+  color: #8c8c8c;
+  margin: 9em 0;
+}
+section.leader .ab-leader {
+  left: 42%;
+  top: 39%;
+  height: 100%;
+  position: absolute;
+}
+
+.box-leader {
+  background-color: white;
+  padding: 6em 6em 0;
+  max-width: 655px;
+}
+
+.leader-title,
+h3.creations,
+.creations.h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 45px;
+  color: black;
+}
+
 /*# sourceMappingURL=loop-main.css.map */
