@@ -60,16 +60,122 @@ section.leader {
         height: 100%;
         position: absolute;
     }
+    & .box-leader {
+        background-color: white;
+        padding: 6em 6em 0;
+        max-width: 646px;
+    }
 }
 
-.box-leader {
-    background-color: white;
-    padding: 6em 6em 0;
-    max-width: 655px;
+section.creations {
+    & a.see {
+        @include type-1(15);
+        background-color: $second-color;
+        max-width: 150px;
+        align-items: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: $primary-color;
+        text-decoration: none;
+        max-height: 50px;
+        letter-spacing: 4px;
+        &:hover {
+            background-color: $primary-color;
+            border: 1px solid $second-color;
+            color: $second-color;
+            transition: 0.4s;
+        }
+    }
+    & a {
+        @include type-2(30);
+        text-decoration: none;
+        &:hover {
+            opacity: 1;
+            z-index: 3;
+        }
+    }
 }
 
 .leader-title,
 h3.creations {
     @include type-2(45);
     color: $second-color;
+}
+
+.earth,
+.game,
+.soccer,
+.car,
+.race,
+.aerial,
+.robot,
+.picture {
+    margin: 2em 0;
+    background: {
+        position: center;
+        repeat: no-repeat;
+    }
+    height:450px;
+    &:hover {
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+    }
+}
+
+.earth {
+    background: {
+        image: url("/assets/img/desktop/image-deep-earth.jpg");
+        size: cover;
+    }
+}
+
+.game {
+    background: {
+        image: url("/assets/img/desktop/image-night-arcade.jpg");
+        size: cover;
+    }
+}
+
+.soccer {
+    background: {
+        image: url("/assets/img/desktop/image-soccer-team.jpg");
+        size: cover;
+    }
+}
+
+.car {
+    background: {
+        image: url("/assets/img/desktop/image-grid.jpg");
+        size: cover;
+    }
+}
+
+.race {
+    background: {
+        image: url("/assets/img/desktop/image-from-above.jpg");
+        size: cover;
+    }
+}
+
+.aerial {
+    background: {
+        image: url("/assets/img/desktop/image-pocket-borealis.jpg");
+        size: cover;
+    }
+}
+
+.robot {
+    background: {
+        image: url("/assets/img/desktop/image-curiosity.jpg");
+        size: cover;
+    }
+}
+
+.picture {
+    background: {
+        image: url("/assets/img/desktop/image-fisheye.jpg");
+        size: cover;
+    }
 }

@@ -10804,11 +10804,44 @@ section.leader .ab-leader {
   height: 100%;
   position: absolute;
 }
-
-.box-leader {
+section.leader .box-leader {
   background-color: white;
   padding: 6em 6em 0;
-  max-width: 655px;
+  max-width: 646px;
+}
+
+section.creations a.see {
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 15px;
+  background-color: black;
+  max-width: 150px;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  max-height: 50px;
+  letter-spacing: 4px;
+}
+section.creations a.see:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  transition: 0.4s;
+}
+section.creations a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+section.creations a:hover {
+  opacity: 1;
+  z-index: 3;
 }
 
 .leader-title,
@@ -10819,6 +10852,72 @@ h3.creations,
   color: white;
   font-size: 45px;
   color: black;
+}
+
+.earth,
+.game,
+.soccer,
+.car,
+.race,
+.aerial,
+.robot,
+.picture {
+  margin: 2em 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+}
+.earth:hover,
+.game:hover,
+.soccer:hover,
+.car:hover,
+.race:hover,
+.aerial:hover,
+.robot:hover,
+.picture:hover {
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.earth {
+  background-image: url("/assets/img/desktop/image-deep-earth.jpg");
+  background-size: cover;
+}
+
+.game {
+  background-image: url("/assets/img/desktop/image-night-arcade.jpg");
+  background-size: cover;
+}
+
+.soccer {
+  background-image: url("/assets/img/desktop/image-soccer-team.jpg");
+  background-size: cover;
+}
+
+.car {
+  background-image: url("/assets/img/desktop/image-grid.jpg");
+  background-size: cover;
+}
+
+.race {
+  background-image: url("/assets/img/desktop/image-from-above.jpg");
+  background-size: cover;
+}
+
+.aerial {
+  background-image: url("/assets/img/desktop/image-pocket-borealis.jpg");
+  background-size: cover;
+}
+
+.robot {
+  background-image: url("/assets/img/desktop/image-curiosity.jpg");
+  background-size: cover;
+}
+
+.picture {
+  background-image: url("/assets/img/desktop/image-fisheye.jpg");
+  background-size: cover;
 }
 
 /*# sourceMappingURL=loop-main.css.map */
