@@ -26,9 +26,8 @@ section.header {
     &:hover {
         color: $primary-color;
         text-decoration: underline $primary-color solid 2px;
-        text-underline-position: under;
+        text-underline-offset: 11px;
         transform: translateX(-2px);
-        transition: 0.3s;
     }
     &:active {
         color: $primary-color;
@@ -55,10 +54,8 @@ section.leader {
     color: $third-color;
     margin: 9em 0;
     & .ab-leader {
-        left: 42%;
-        top: 39%;
-        height: 100%;
-        position: absolute;
+        left: -7%;
+        position: relative;
     }
     & .box-leader {
         background-color: white;
@@ -68,6 +65,10 @@ section.leader {
 }
 
 section.creations {
+    margin-bottom: 120px;
+    & .col-12 {
+        margin: 2em 0;
+    }
     & a.see {
         @include type-1(15);
         background-color: $second-color;
@@ -79,6 +80,7 @@ section.creations {
         color: $primary-color;
         text-decoration: none;
         max-height: 50px;
+        padding: 20px 0;
         letter-spacing: 4px;
         &:hover {
             background-color: $primary-color;
@@ -90,10 +92,22 @@ section.creations {
     & a {
         @include type-2(30);
         text-decoration: none;
+        width: 100%;
+        height: 100%;
         &:hover {
             opacity: 1;
             z-index: 3;
+            color: $second-color;
         }
+    }
+    & .sub-creations {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        bottom: -18em;
     }
 }
 
@@ -111,71 +125,91 @@ h3.creations {
 .aerial,
 .robot,
 .picture {
-    margin: 2em 0;
     background: {
         position: center;
         repeat: no-repeat;
+        size: cover;
     }
     height:450px;
     &:hover {
-        -moz-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        opacity: 0.4;
     }
 }
 
 .earth {
     background: {
         image: url("/assets/img/desktop/image-deep-earth.jpg");
-        size: cover;
     }
 }
 
 .game {
     background: {
         image: url("/assets/img/desktop/image-night-arcade.jpg");
-        size: cover;
     }
 }
 
 .soccer {
     background: {
         image: url("/assets/img/desktop/image-soccer-team.jpg");
-        size: cover;
     }
 }
 
 .car {
     background: {
         image: url("/assets/img/desktop/image-grid.jpg");
-        size: cover;
     }
 }
 
 .race {
     background: {
         image: url("/assets/img/desktop/image-from-above.jpg");
-        size: cover;
     }
 }
 
 .aerial {
     background: {
         image: url("/assets/img/desktop/image-pocket-borealis.jpg");
-        size: cover;
     }
 }
 
 .robot {
     background: {
         image: url("/assets/img/desktop/image-curiosity.jpg");
-        size: cover;
     }
 }
 
 .picture {
     background: {
         image: url("/assets/img/desktop/image-fisheye.jpg");
-        size: cover;
+    }
+}
+
+.footer {
+    background-color: $second-color;
+    padding: 20px 0;
+    & .navbar-brand {
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    & .nav-link {
+        color: $primary-color;
+        & i.fab {
+            font-size: 30px;
+            &:hover {
+                text-decoration: underline solid 2px $primary-color;
+            }
+        }
+    }
+    & #footerText {
+        padding: 0;
+    }
+    & .footer-copyright {
+        padding: 0;
+        @include type-1(15);
+        color: $third-color;
     }
 }
