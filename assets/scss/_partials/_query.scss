@@ -1,0 +1,40 @@
+.title-big {
+    @include dispositivo(mobile) {
+        max-width: 100px!important;
+    }
+}
+
+#navbarText {
+    @include dispositivo(mobile) {
+        background-color: $second-color;
+    }
+}
+
+section.header header {
+    @include dispositivo(mobile) {
+        background: {
+            image: none !important;
+            color: $second-color;
+        }
+        & .col-12 {
+            height: 100%;
+        }
+        & .container {
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+        }
+        font: {
+            family: 'Josefin Sans', sans-serif!important;
+            size: clamp(20px, 2vw, 15px)!important;
+        }
+    }
+}
+
+section.leader {
+    & .ab-leader {
+        @include dispositivo(mobile) {
+            position: initial;
+        }
+    }
+}

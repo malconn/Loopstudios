@@ -11,13 +11,16 @@ $for-color:hsl(0, 0%, 41%);
     }
     color:$primary-color;
     @if $size==15 {
-        font-size: 15px;
+        font-size: clamp(10px, 2vw, 15px)!important;
     }
     @else if $size==30 {
-        font-size: 30px;
+        font-size: clamp(25px, 3vw, 30px)!important;
     }
     @else if $size==45 {
-        font-size: 45px;
+        font-size: clamp(40px, 4vw, 45px)!important;
+    }
+    @else if $size==60 {
+        font-size: clamp(45px, 5vw, 60px)!important;
     }
 }
 
@@ -28,15 +31,57 @@ $for-color:hsl(0, 0%, 41%);
     }
     color:$primary-color;
     @if $size==15 {
-        font-size: 15px;
+        font-size: clamp(10px, 2vw, 15px)!important;
     }
     @else if $size==30 {
-        font-size: 30px;
+        font-size: clamp(25px, 3vw, 30px)!important;
     }
     @else if $size==45 {
-        font-size: 45px;
+        font-size: clamp(25px, 4vw, 45px)!important;
     }
     @else if $size==60 {
-        font-size: 60px;
+        font-size: clamp(35px, 5vw, 60px)!important;
+    }
+}
+
+//media
+@mixin dispositivo($dispositivo) {
+    @if $dispositivo==desk {
+        @media only screen and(max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $dispositivo==mobile {
+        @media only screen and(max-width: 767px) {
+            @content;
+        }
+    }
+}
+
+//each
+$sizes: 1 url(../../../assets/img/desktop/image-bg-1.jpg),
+2 url(../../../assets/img/desktop/image-bg-2.jpg),
+3 url(../../../assets/img/desktop/image-bg-3.jpg),
+4 url(../../../assets/img/desktop/image-bg-4.jpg),
+5 url(../../../assets/img/desktop/image-bg-5.jpg),
+6 url(../../../assets/img/desktop/image-bg-6.jpg),
+7 url(../../../assets/img/desktop/image-bg-7.jpg),
+8 url(../../../assets/img/desktop/image-bg-8.jpg);
+@each $pos,
+$images in $sizes {
+    .bg-pos-#{$pos} {
+        background: {
+            position: center;
+            repeat: no-repeat;
+            size: cover;
+            image: $images;
+        }
+        height: 450px;
+        &:hover {
+            -moz-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+            opacity: 0.4;
+        }
     }
 }

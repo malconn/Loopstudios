@@ -1,52 +1,56 @@
-section.header {
+header {
+    @include type-1(15);
     height: 650px;
-    & header {
-        @include type-1(15);
+    max-height: 100%;
+    background: {
+        image: url("/assets/img/desktop/image-hero.jpg");
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    }
+    & .header {
         height: 100%;
-        max-height: 100%;
-        background: {
-            image: url("/assets/img/desktop/image-hero.jpg");
-            position: center;
-            repeat: no-repeat;
-            size: cover;
+        a {
+            color: $primary-color;
+            & :hover {
+                color: $primary-color;
+            }
+        }
+        & i.fas.fa-bars {
+            color: $primary-color;
+            font-size: 20px;
         }
     }
-    & a {
-        color: $primary-color;
+    .navbar-brand {
+        @include type-1(30);
+        letter-spacing: -1px;
     }
-}
-
-.navbar-brand {
-    @include type-1(30);
-    letter-spacing: -1px;
-}
-
-.nav-link {
-    transition: 1s;
-    &:hover {
-        color: $primary-color;
-        text-decoration: underline $primary-color solid 2px;
-        text-underline-offset: 11px;
-        transform: translateX(-2px);
+    .nav-link {
+        transition: 1s;
+        &:hover {
+            color: $primary-color!important;
+            text-decoration: underline $primary-color solid 2px;
+            text-underline-offset: 11px;
+            transform: translateX(-2px);
+            transition: 0.6s;
+        }
+        &:active {
+            color: $primary-color;
+        }
     }
-    &:active {
-        color: $primary-color;
+    .box-title {
+        height: 100%;
+        max-height: 300px;
+        align-items: center;
+        display: flex;
+        max-width: 700px!important;
+        width: 100%;
+        border: 1px solid $primary-color;
+        padding: 3em;
     }
-}
-
-.box-title {
-    height: 100%;
-    max-height: 300px;
-    align-items: center;
-    display: flex;
-    max-width: 700px;
-    width: 100%;
-    border: 1px solid $primary-color;
-    padding: 3em;
-}
-
-.title-big {
-    @include type-2(60);
+    .title-big {
+        @include type-2(60);
+    }
 }
 
 section.leader {
@@ -139,68 +143,37 @@ h3.creations {
     }
 }
 
-.earth {
-    background: {
-        image: url("/assets/img/desktop/image-deep-earth.jpg");
-    }
-}
-
-.game {
-    background: {
-        image: url("/assets/img/desktop/image-night-arcade.jpg");
-    }
-}
-
-.soccer {
-    background: {
-        image: url("/assets/img/desktop/image-soccer-team.jpg");
-    }
-}
-
-.car {
-    background: {
-        image: url("/assets/img/desktop/image-grid.jpg");
-    }
-}
-
-.race {
-    background: {
-        image: url("/assets/img/desktop/image-from-above.jpg");
-    }
-}
-
-.aerial {
-    background: {
-        image: url("/assets/img/desktop/image-pocket-borealis.jpg");
-    }
-}
-
-.robot {
-    background: {
-        image: url("/assets/img/desktop/image-curiosity.jpg");
-    }
-}
-
-.picture {
-    background: {
-        image: url("/assets/img/desktop/image-fisheye.jpg");
-    }
-}
-
-.footer {
+footer {
+    @include type-1(15);
     background-color: $second-color;
     padding: 20px 0;
     & .navbar-brand {
+        @include type-1(30);
+        letter-spacing: -1px;
         &:hover {
             color: $primary-color;
         }
     }
     & .nav-link {
         color: $primary-color;
+        &:hover {
+            color: $primary-color;
+            text-decoration: underline $primary-color solid 2px;
+            text-underline-offset: 11px;
+            transform: translateX(-2px);
+            transition: 0.6s;
+        }
+        &:focus {
+            color: $primary-color;
+        }
         & i.fab {
             font-size: 30px;
             &:hover {
                 text-decoration: underline solid 2px $primary-color;
+                color: $primary-color;
+            }
+            &:focus {
+                color: $primary-color;
             }
         }
     }
