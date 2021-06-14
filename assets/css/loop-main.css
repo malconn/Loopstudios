@@ -98,6 +98,102 @@
     transition: all 0.4s ease-in-out;
     opacity: 0.4; }
 
+@media only screen and (max-width: 767px) {
+  .bg-pos-1 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../assets/img/mobile/image-bg-1.jpg);
+    height: 240px; }
+    .bg-pos-1:hover {
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.4; }
+
+  .bg-pos-2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../assets/img/mobile/image-bg-2.jpg);
+    height: 240px; }
+    .bg-pos-2:hover {
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.4; }
+
+  .bg-pos-3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../assets/img/mobile/image-bg-3.jpg);
+    height: 240px; }
+    .bg-pos-3:hover {
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.4; }
+
+  .bg-pos-4 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../assets/img/mobile/image-bg-4.jpg);
+    height: 240px; }
+    .bg-pos-4:hover {
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.4; }
+
+  .bg-pos-5 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../assets/img/mobile/image-bg-5.jpg);
+    height: 240px; }
+    .bg-pos-5:hover {
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.4; }
+
+  .bg-pos-6 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../assets/img/mobile/image-bg-6.jpg);
+    height: 240px; }
+    .bg-pos-6:hover {
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.4; }
+
+  .bg-pos-7 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../assets/img/mobile/image-bg-7.jpg);
+    height: 240px; }
+    .bg-pos-7:hover {
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.4; }
+
+  .bg-pos-8 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../assets/img/mobile/image-bg-8.jpg);
+    height: 240px; }
+    .bg-pos-8:hover {
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.4; } }
 header {
   font-family: 'Alata', sans-serif;
   font-weight: 400;
@@ -202,6 +298,10 @@ section.creations {
       z-index: 3;
       color: black; }
   section.creations .sub-creations {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: clamp(22px, 2vw, 25px);
     position: relative;
     max-width: 100%;
     width: 100%;
@@ -290,24 +390,52 @@ footer {
     max-width: 100px !important; } }
 
 @media only screen and (max-width: 767px) {
-  #navbarText {
-    background-color: black; } }
-
-@media only screen and (max-width: 767px) {
-  section.header header {
-    background-image: none !important;
-    background-color: black;
-    font-family: "Josefin Sans", sans-serif !important;
-    font-size: clamp(20px, 2vw, 15px) !important; }
-    section.header header .col-12 {
-      height: 100%; }
-    section.header header .container {
-      margin: 0;
-      padding: 0;
-      max-width: 100%; } }
+  header {
+    background-image: url("../../../assets/img/mobile/image-hero.jpg"); }
+    header .navbar-collapse {
+      margin-bottom: 22em;
+      top: 100px;
+      position: relative; }
+    header .nav-link {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 400;
+      color: white;
+      font-size: clamp(25px, 3vw, 30px) !important;
+      font-weight: 300 !important;
+      line-height: 1.5em; }
+    header.active {
+      background-color: black !important;
+      background-image: none !important; }
+    header .fa-times {
+      color: white;
+      font-size: 20px;
+      transition: all 0.4s ease-in-out; } }
 
 @media only screen and (max-width: 767px) {
   section.leader .ab-leader {
-    position: initial; } }
+    position: initial; }
+  section.leader .box-leader {
+    text-align: center; } }
+
+@media only screen and (max-width: 767px) {
+  section.creations a.see {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    margin: 30px auto 0; }
+    section.creations a.see:focus {
+      transition: 0.4s;
+      color: white;
+      background-color: black; }
+  section.creations .leader-title,
+  section.creations h3.creations {
+    text-align: center; }
+  section.creations .sub-creations {
+    justify-content: flex-start;
+    bottom: -10em;
+    padding-left: 2em; } }
+
+footer {
+  text-align: center; }
 
 /*# sourceMappingURL=loop-main.css.map */

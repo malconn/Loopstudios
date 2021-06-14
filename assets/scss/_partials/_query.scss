@@ -1,40 +1,70 @@
-.title-big {
-    @include dispositivo(mobile) {
-        max-width: 100px!important;
-    }
-}
-
-#navbarText {
-    @include dispositivo(mobile) {
-        background-color: $second-color;
-    }
-}
-
-section.header header {
-    @include dispositivo(mobile) {
-        background: {
-            image: none !important;
-            color: $second-color;
+        .title-big {
+            @include dispositivo(mobile) {
+                max-width: 100px!important;
+            }
         }
-        & .col-12 {
-            height: 100%;
+        
+        header {
+            @include dispositivo(mobile) {
+                background-image: url("../../../assets/img/mobile/image-hero.jpg");
+                & .navbar-collapse {
+                    margin-bottom: 22em;
+                    top: 100px;
+                    position: relative;
+                }
+                & .nav-link {
+                    @include type-2(30);
+                    font-weight: 300!important;
+                    line-height: 1.5em;
+                }
+                &.active {
+                    background-color: $second-color!important;
+                    background-image: none!important;
+                }
+                & .fa-times {
+                    color: $primary-color;
+                    font-size: 20px;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
         }
-        & .container {
-            margin: 0;
-            padding: 0;
-            max-width: 100%;
+        
+        section.leader {
+            @include dispositivo(mobile) {
+                & .ab-leader {
+                    position: initial;
+                }
+                & .box-leader {
+                    text-align: center;
+                }
+            }
         }
-        font: {
-            family: 'Josefin Sans', sans-serif!important;
-            size: clamp(20px, 2vw, 15px)!important;
+        
+        section.creations {
+            @include dispositivo(mobile) {
+                & a.see {
+                    color: $second-color;
+                    background-color: $primary-color;
+                    border: 1px solid $second-color;
+                    margin: 30px auto 0;
+                    &:focus {
+                        transition: 0.4s;
+                        color: $primary-color;
+                        background-color: $second-color;
+                    }
+                }
+                & .leader-title,
+                h3.creations {
+                    text-align: center;
+                }
+                & .sub-creations {
+                    justify-content: flex-start;
+                    bottom: -10em;
+                    padding-left: 2em;
+                }
+            }
         }
-    }
-}
-
-section.leader {
-    & .ab-leader {
-        @include dispositivo(mobile) {
-            position: initial;
+        
+        footer {
+            text-align: center;
         }
-    }
-}
