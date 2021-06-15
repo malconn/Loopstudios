@@ -21,11 +21,11 @@ header {
             font-size: 20px;
         }
     }
-    .navbar-brand {
+    & .navbar-brand {
         @include type-1(30);
         letter-spacing: -1px;
     }
-    .nav-link {
+    &.nav-link {
         transition: 1s;
         &:hover {
             color: $primary-color!important;
@@ -38,7 +38,7 @@ header {
             color: $primary-color;
         }
     }
-    .box-title {
+    & .box-title {
         height: 100%;
         max-height: 300px;
         align-items: center;
@@ -48,7 +48,7 @@ header {
         border: 1px solid $primary-color;
         padding: 3em;
     }
-    .title-big {
+    & .title-big {
         @include type-2(60);
     }
 }
@@ -113,6 +113,12 @@ section.creations {
         justify-content: center;
         align-items: flex-end;
         bottom: -18em;
+    }
+}
+
+h4.sub-creations {
+    &:hover {
+        color: $second-color;
     }
 }
 

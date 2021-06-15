@@ -49,8 +49,8 @@ $for-color:hsl(0, 0%, 41%);
 
 //media
 @mixin dispositivo($dispositivo) {
-    @if $dispositivo==desk {
-        @media only screen and(max-width: 1024px) {
+    @if $dispositivo==tablet {
+        @media only screen and(max-width: 992px) {
             @content;
         }
     }
