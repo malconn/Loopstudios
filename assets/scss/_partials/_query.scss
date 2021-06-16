@@ -25,11 +25,20 @@
         }
     }
     section.leader {
+        margin: 4em 0;
         & .ab-leader {
             position: initial;
         }
         & .box-leader {
             text-align: center;
+            padding: 4em 0 0;
+        }
+        & .leader-title {
+            max-width: 100%;
+        }
+        & .p-leader {
+            max-width: 233px;
+            margin: 0 auto;
         }
     }
     section.creations {
@@ -56,5 +65,20 @@
     }
     footer {
         text-align: center;
+        & .mobile-redes {
+            flex-direction: row;
+            justify-content: center;
+            & .nav-item {
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+@include dispositivo(tablet) {
+    section.leader {
+        & .box-leader {
+            padding: 2em;
+        }
     }
 }

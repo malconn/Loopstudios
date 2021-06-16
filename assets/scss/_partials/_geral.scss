@@ -8,22 +8,37 @@ header {
         repeat: no-repeat;
         size: cover;
     }
+    & .nav-link {
+        color: $primary-color;
+        &:hover {
+            color: $primary-color;
+            text-decoration: underline $primary-color solid 2px;
+            text-underline-offset: 11px;
+            transform: translateX(-2px);
+            transition: 0.6s;
+        }
+        &:focus {
+            color: $primary-color;
+        }
+    }
     & .header {
         height: 100%;
-        a {
+        & a {
             color: $primary-color;
             & :hover {
                 color: $primary-color;
             }
         }
-        & i.fas.fa-bars {
+        & i.fas.fa-bars,
+        i.fas.fa-times {
             color: $primary-color;
-            font-size: 20px;
+            font-size: 25px;
         }
     }
     & .navbar-brand {
         @include type-1(30);
         letter-spacing: -1px;
+        font-weight: 700;
     }
     &.nav-link {
         transition: 1s;
@@ -51,6 +66,12 @@ header {
     & .title-big {
         @include type-2(60);
     }
+    & a {
+        color: $primary-color;
+        & :hover {
+            color: $primary-color;
+        }
+    }
 }
 
 section.leader {
@@ -65,6 +86,11 @@ section.leader {
         background-color: white;
         padding: 6em 6em 0;
         max-width: 646px;
+    }
+    & .leader-title {
+        @include type-2(35);
+        color: $second-color;
+        max-width: 300px;
     }
 }
 
@@ -93,17 +119,6 @@ section.creations {
             transition: 0.4s;
         }
     }
-    & a {
-        @include type-2(30);
-        text-decoration: none;
-        width: 100%;
-        height: 100%;
-        &:hover {
-            opacity: 1;
-            z-index: 3;
-            color: $second-color;
-        }
-    }
     & .sub-creations {
         @include type-2(25);
         position: relative;
@@ -114,39 +129,31 @@ section.creations {
         align-items: flex-end;
         bottom: -18em;
     }
-}
-
-h4.sub-creations {
-    &:hover {
+    & .box-creations {
+        text-decoration: none;
+        &:hover {
+            & .sub-creations {
+                color: $second-color;
+            }
+            & .bg-pos-1,
+            .bg-pos-2,
+            .bg-pos-3,
+            .bg-pos-4,
+            .bg-pos-5,
+            .bg-pos-6,
+            .bg-pos-7,
+            .bg-pos-8 {
+                -moz-transition: all 0.4s ease-in-out;
+                -o-transition: all 0.4s ease-in-out;
+                transition: all 0.4s ease-in-out;
+                opacity: 0.4;
+            }
+        }
+    }
+    & .leader-title,
+    h3.creations {
+        @include type-2(45);
         color: $second-color;
-    }
-}
-
-.leader-title,
-h3.creations {
-    @include type-2(45);
-    color: $second-color;
-}
-
-.earth,
-.game,
-.soccer,
-.car,
-.race,
-.aerial,
-.robot,
-.picture {
-    background: {
-        position: center;
-        repeat: no-repeat;
-        size: cover;
-    }
-    height:450px;
-    &:hover {
-        -moz-transition: all 0.4s ease-in-out;
-        -o-transition: all 0.4s ease-in-out;
-        transition: all 0.4s ease-in-out;
-        opacity: 0.4;
     }
 }
 
@@ -157,6 +164,7 @@ footer {
     & .navbar-brand {
         @include type-1(30);
         letter-spacing: -1px;
+        font-weight: 700;
         &:hover {
             color: $primary-color;
         }
