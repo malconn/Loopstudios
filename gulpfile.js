@@ -12,14 +12,14 @@ function css() {
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('loop-main.min.css'))
         .pipe(cssmin())
-        .pipe(dest(`./dist/assets/css`));
+        .pipe(dest(`./docs/assets/css`));
 }
 
 function html() {
     return src('src/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(concat('index.html'))
-        .pipe(dest(`./dist/`));
+        .pipe(dest(`./docs/`));
 }
 
 function js() {
@@ -39,7 +39,7 @@ function js() {
         )
         .pipe(babel())
         .pipe(jsmin())
-        .pipe(dest(`./dist/assets/js`));
+        .pipe(dest(`./docs/assets/js`));
 }
 exports.watch = (cb) => {
     watch('src/assets/scss/**/*.scss', css);
