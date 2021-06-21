@@ -1,1 +1,0 @@
-"use strict";!function(e){"function"==typeof define&&define.amd?define(e):e()}(function(){var e=document.querySelector("header"),t=document.querySelector(".navbar-toggler"),n=document.querySelector(".fa-bars");t.addEventListener("click",function(){e.classList.toggle("active"),n.classList.toggle("fa-times")})});
